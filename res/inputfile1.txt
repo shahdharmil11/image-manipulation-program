@@ -1,0 +1,66 @@
+load png/boston.png org
+compress 20 org orgComp20
+compress 50 org orgComp50
+compress 90 org orgComp90
+color-correct org orgColorCor
+levels-adjust 20 100 255 org orgLvlAdj
+levels-adjust 50 160 200 org orgLvlAdj2
+histogram orgComp20 hist-orgComp20
+histogram orgComp50 hist-orgComp50
+histogram orgComp90 hist-orgComp90
+histogram orgColorCor hist-orgColorCor
+histogram orgLvlAdj hist-orgLvlAdj
+histogram orgLvlAdj2 hist-orgLvlAdj2
+save png/boston-compress-20.png orgComp20
+save png/boston-compress-50.png orgComp50
+save png/boston-compress-90.png orgComp90
+save png/boston-color-correct.png orgColorCor
+save png/boston-lvl-adjust-20-100-255.png orgLvlAdj
+save png/boston-lvl-adjust-50-160-200.png orgLvlAdj2
+save png/boston-compress-20-hist.png hist-orgComp20
+save png/boston-compress-50-hist.png hist-orgComp50
+save png/boston-compress-90-hist.png hist-orgComp90
+save png/boston-color-correct-hist.png hist-orgColorCor
+save png/boston-lvl-adjust-20-100-255-hist.png hist-orgLvlAdj
+save png/boston-lvl-adjust-50-160-200-hist.png hist-orgLvlAdj2
+luma-component org orggrey split 60
+sepia orggrey orgsepia split 30
+save png/boston-grey-60.png orggrey
+save png/boston-grey-60-sepia-30.png orgsepia
+sharpen org orgsharp split 70
+blur orgsharp orgshapr2 split 30
+save png/boston-sharp-70.png orgsharp
+save png/boston-sharp-70-blur-30.png orgshapr2
+load png/boston.png original
+luma-component original greyorg
+save png/boston-greyscale.png greyorg
+sepia original sepiaorg
+save png/boston-sepia.png sepiaorg
+intensity-component original intensityorg
+save png/boston-intensity.png intensityorg
+value-component original valueorg
+save png/boston-maxvalue.png valueorg
+brighten 100 original brightorg
+save png/boston-brighter-by-100.png brightorg
+brighten -100 original darkorg
+save png/boston-dark-by-(-100).png darkorg
+vertical-flip original vertiorg
+save png/boston-vertical.png vertiorg
+horizontal-flip original horiorg
+save png/boston-horizontal.png horiorg
+vertical-flip horiorg horivertiorg
+save png/boston-horizontal-vertical.png horivertiorg
+horizontal-flip vertiorg vertihoriorg
+save png/boston-vertical-horizontal.png vertihoriorg
+rgb-split original redorg greenorg blueorg
+save png/boston-red.png redorg
+save png/boston-green.png greenorg
+save png/boston-blue.png blueorg
+rgb-combine orgcombined redorg greenorg blueorg
+save png/boston-combined.png orgcombined
+blur original blurorg
+save png/boston-blur.png blurorg
+blur blurorg blurredorg
+save png/boston-blurred.png blurredorg
+sharpen original sharporg
+save png/boston-sharpen.png sharporg

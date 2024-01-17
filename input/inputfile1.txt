@@ -1,0 +1,33 @@
+load Assignment5/res/png/boston.png org
+compress 20 org orgComp20
+compress 50 org orgComp50
+compress 90 org orgComp90
+color-correct org orgColorCor
+levels-adjust 20 100 255 org orgLvlAdj
+levels-adjust 50 160 200 org orgLvlAdj2
+histogram orgComp20 hist-orgComp20
+histogram orgComp50 hist-orgComp50
+histogram orgComp90 hist-orgComp90
+histogram orgColorCor hist-orgColorCor
+histogram orgLvlAdj hist-orgLvlAdj
+histogram orgLvlAdj2 hist-orgLvlAdj2
+save Assignment5/res/png/boston-compress-20.png orgComp20
+save Assignment5/res/png/boston-compress-50.png orgComp50
+save Assignment5/res/png/boston-compress-90.png orgComp90
+save Assignment5/res/png/boston-color-correct.png orgColorCor
+save Assignment5/res/png/boston-lvl-adjust-20-100-255.png orgLvlAdj
+save Assignment5/res/png/boston-lvl-adjust-50-160-200.png orgLvlAdj2
+save Assignment5/res/png/boston-compress-20-hist.png hist-orgComp20
+save Assignment5/res/png/boston-compress-50-hist.png hist-orgComp50
+save Assignment5/res/png/boston-compress-90-hist.png hist-orgComp90
+save Assignment5/res/png/boston-color-correct-hist.png hist-orgColorCor
+save Assignment5/res/png/boston-lvl-adjust-20-100-255-hist.png hist-orgLvlAdj
+save Assignment5/res/png/boston-lvl-adjust-50-160-200-hist.png hist-orgLvlAdj2
+luma-component org orggrey split 60
+sepia orggrey orgsepia split 30
+save Assignment5/res/png/boston-grey-60.png orggrey
+save Assignment5/res/png/boston-grey-60-sepia-30.png orgsepia
+sharpen org orgsharp split 70
+blur orgsharp orgshapr2 split 30
+save Assignment5/res/png/boston-sharp-70.png orgsharp
+save Assignment5/res/png/boston-sharp-70-blur-30.png orgshapr2

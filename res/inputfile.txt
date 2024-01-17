@@ -1,0 +1,13 @@
+load manhattan-small.png org
+green-component org org-green
+blue-component org org-blue
+brighten 100 org org-bright
+blur org org-blur
+sharpen org org-sharp
+vertical-flip org org-vert
+luma-component org org-luma
+sepia org org-sepia
+intensity-component org org-intensity
+value-component org org-value
+compress 90 org org-comp90
+save images/image-blur-script.ppm org
